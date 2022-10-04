@@ -11,6 +11,9 @@ export default ({ $config, store }, inject) => {
                 profileUrl: user.picture,
             });
 
+            // init user in data store
+            fetch("/api/user");
+
             Cookie.set($config.auth.cookieName, token, {
                 expires: 1 / 24,
                 sameSite: "Lax",
