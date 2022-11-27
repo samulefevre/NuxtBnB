@@ -48,7 +48,7 @@ export default {
   props:{
     homes: {
       type: Array,
-      default: []
+      default: () => []
     }
   }
 }
